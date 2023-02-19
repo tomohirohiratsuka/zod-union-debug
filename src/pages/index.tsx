@@ -32,9 +32,7 @@ const schema = z.union([
         graduate: z.literal('master'),
         url: z.string().url()
     })
-]).refine(data => {
-    return true
-})
+])
 type FormType = z.infer<typeof schema>
 export default function Home() {
     const {
